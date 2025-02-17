@@ -18,13 +18,9 @@ run_command() {
 # Update package lists
 run_command "sudo apt-get update"
 
-# Install the first set of GStreamer packages
-echo "Installing first set of GStreamer packages..."
-run_command "sudo apt-get install -y libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav libgstrtspserver-1.0-dev"
-
-# Install the second set of GStreamer packages
-echo "Installing second set of GStreamer packages..."
-run_command "sudo apt-get install -y libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-plugins-bad1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio"
+# Install required GStreamer packages
+echo "Installing GStreamer packages..."
+run_command "sudo apt-get install -y libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-plugins-bad1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio libgstrtspserver-1.0-dev"
 
 # Install python3-pip
 echo "Installing python3-pip..."
@@ -32,7 +28,7 @@ run_command "sudo apt install -y python3-pip"
 
 # Install other required packages
 echo "Installing additional required packages..."
-run_command "sudo apt-get install -y libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstrtspserver-1.0-dev libglib2.0-dev libcairo2-dev libopencv-dev pkg-config"
+run_command "sudo apt-get install -y libglib2.0-dev libcairo2-dev libopencv-dev pkg-config"
 
 # Install gdown for downloading Google Drive folders
 echo "Installing gdown..."
