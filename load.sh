@@ -50,4 +50,6 @@ run_command "cd TUYZ_2021_Ornek_Veri_Seti && mv '2021 Örnek Video.mp4' test.mp4
 echo "Cleaning up dataset folder..."
 run_command "rm -rf TUYZ_2021_Ornek_Veri_Seti"
 
+run_command "g++ -o my_rtsp_server rtsp_server.cpp $(pkg-config --cflags --libs opencv4)  $(pkg-config --cflags --libs gstreamer-1.0 gstreamer-rtsp-server-1.0 glib-2.0 cairo) -pthread"
+
 echo "All installations and operations have been successfully completed!"
