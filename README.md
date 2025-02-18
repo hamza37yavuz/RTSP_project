@@ -111,6 +111,9 @@ python mainClient.py
 ```
 This process ensures that all dependencies are correctly configured and the RTSP server is successfully created. In terms of performance, with no filter applied the stream reaches about 25 fps, which remains constant with the inversion filter. However, applying the contrast filter causes the frame rate to drop to about 20 fps, and using the saturation filter reduces the frame rate further to about 15 fps. On average, other filters provide frame rates between 15 and 25 fps. These fluctuations are partly due to the virtual machine environment and regional factors. Thanks to the automated installation and compilation process performed by load.sh, deploying a high-performance RTSP streaming solution becomes easy and efficient.
 
+[![Watch on YouTube](https://img.youtube.com/vi/JBu5JapfCQM/0.jpg)](https://youtu.be/JBu5JapfCQM)
+
+
 ## 5. References
 
 https://gstreamer.freedesktop.org/documentation/installing/on-linux.html?gi-language=c
